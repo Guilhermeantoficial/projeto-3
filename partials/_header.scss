@@ -1,0 +1,98 @@
+/* Variáveis de cores (se ainda não existirem) */
+:root {
+    --white-normal: #ffffff;
+    --red-light: #ff6b6b;
+  }
+  
+  /* Header */
+  header {
+    width: 100%;
+    padding: 20px 0; /* Adicionado padding para espaçamento */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Adicionado padding para espaçamento */
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 14px;
+  }
+  
+  .header-icons a {
+    color: var(--white-normal);
+    transition: color 0.3s ease;
+  }
+  
+  .header-icons a:hover i {
+    animation: translateY 0.8s infinite alternate;
+    color: var(--red-light);
+  }
+  
+  @keyframes translateY {
+    from {
+      transform: translateY(0) scale(1);
+    }
+    to {
+      transform: translateY(-8px) scale(1.1);
+    }
+  }
+  
+  .header-button {
+    border: 1px solid var(--white-normal);
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: var(--white-normal);
+    background-color: transparent;
+    transition: background-color 0.8s, border-color 0.8s;
+    cursor: pointer;
+  }
+  
+  .header-button:hover {
+    border: 1px solid var(--red-light);
+    background-color: var(--red-light);
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+  }
+  
+  .header-logo img {
+    width: 160px; /* Tamanho padrão para desktop */
+    height: auto;
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px; /* Adicionado gap para espaçamento entre elementos */
+    }
+  
+    .header-icons {
+      margin-top: 16px;
+    }
+  
+    .header-icons i {
+      font-size: 24px; /* Tamanho ajustado para mobile */
+    }
+  
+    .header-logo img {
+      width: 120px; /* Tamanho reduzido para mobile */
+      margin-top: 20px;
+    }
+  
+    .header-button {
+      display: none; /* Oculta o botão em telas menores */
+    }
+  }
