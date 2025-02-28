@@ -233,8 +233,8 @@ header {
 
 /* Services Section */
 .services {
-  background-color: var(--white-normal);
-  color: var(--black-normal);
+  background-color: var(--black-normal);
+  color: var(--white-normal);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -423,4 +423,244 @@ header {
   .hero h1 {
     font-size: 24px;
   }
+}
+
+/* Seção Galeria */
+.gallery {
+  background-color: #1a1a1a; /* Cor de fundo escura */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* Cor do texto branco */
+}
+
+.gallery p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #cccccc; /* Cor do texto cinza claro */
+}
+
+/* Estilos para a galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease; /* Transição suave apenas para a opacidade */
+}
+
+.gallery-item:hover img {
+  animation: pulse 1.5s infinite ease-in-out; /* Animação ao passar o mouse */
+}
+
+.image-title {
+  position: absolute;
+  bottom: -100%; /* Inicialmente escondido */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  color: #ffffff; /* Cor do texto */
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  transition: bottom 0.5s ease; /* Transição suave */
+}
+
+.gallery-item:hover .image-title {
+  bottom: 0; /* Exibe o título ao passar o mouse */
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.9;
+  }
+  50% {
+      transform: scale(1.05);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.9;
+  }
+}
+
+/* Seção Depoimentos */
+.testimonials {
+  background-color: #2a2a2a; /* Cor de fundo mais clara */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* Cor do texto branco */
+}
+
+.testimonials p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #cccccc; /* Cor do texto cinza claro */
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.testimonial {
+  background-color: #1a1a1a; /* Cor de fundo escura */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ffffff; /* Cor do texto branco */
+}
+
+.testimonial span {
+  font-size: 0.9rem;
+  color: #ff6b6b; /* Cor do texto destacado */
+  font-style: italic;
+}
+
+/* Seção Contato */
+.contact {
+  background-color: #1a1a1a; /* Cor de fundo escura */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* Cor do texto branco */
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #cccccc; /* Cor do texto cinza claro */
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ff6b6b; /* Cor da borda destacada */
+  background-color: #2a2a2a; /* Cor de fundo dos campos */
+  color: #ffffff; /* Cor do texto branco */
+  font-family: 'Sora', sans-serif;
+  font-size: 1rem;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #cccccc; /* Cor do placeholder */
+  opacity: 0.7;
+}
+
+.contact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact button {
+  background-color: #ff6b6b; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto branco */
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #ff4c4c; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.button-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #E1306C, #C13584); /* Gradiente do Instagram */
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 50px; /* Bordas arredondadas */
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho ao passar o mouse */
+.button-contact::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+}
+
+.button-contact:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Efeito de hover */
+.button-contact:hover {
+  background: linear-gradient(45deg, #C13584, #E1306C); /* Inverte o gradiente */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+  transform: translateY(-3px); /* Levanta o botão */
+}
+
+/* Ícone do Instagram */
+.button-contact i {
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
